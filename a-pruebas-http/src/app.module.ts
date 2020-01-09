@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsuarioEntity } from './usuario/usuario.entity';
 import { UsuarioModule } from './usuario/usuario.module';
-import { UsuarioService } from './usuario/usuario.service';
 
 @Module({
   imports: [
@@ -19,7 +18,7 @@ import { UsuarioService } from './usuario/usuario.service';
         username: 'root',
         password: 'root',
         database: 'Web',
-        dropSchema: true,
+        // dropSchema: true,
         entities: [
           UsuarioEntity,
         ],
@@ -32,6 +31,7 @@ import { UsuarioService } from './usuario/usuario.service';
 })
 export class AppModule {
 
-  constructor() {}
+  constructor() {
+  }
 
 }
